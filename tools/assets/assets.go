@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/izquiratops/bundler-tools/utils"
+	"github.com/izquiratops/bundler-tools/tools/directory"
 
 	"golang.org/x/net/html"
 )
@@ -28,7 +28,7 @@ func handleAsset(srcDirPath, distDirPath, assetRelPath string) (string, error) {
 		log.Fatal(message)
 	}
 
-	if err := utils.MoveTo(srcAbsPath, distAbsPath); err != nil {
+	if err := directory.MoveTo(srcAbsPath, distAbsPath); err != nil {
 		return "", err
 	}
 

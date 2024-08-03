@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/izquiratops/bundler-tools/commands"
+	"github.com/izquiratops/bundler-tools/tools/commands"
 )
 
 type CommonFlags struct {

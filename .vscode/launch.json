@@ -10,8 +10,8 @@
             "env": {},
             "args": [
                 "build",
-                "--entry", "../src/main.js",
-                "--dist", "../dist",
+                "--entry", "../japanese-cheat-sheet/src/main.js",
+                "--dist", "../japanese-cheat-sheet/dist",
                 "--minify", "true"
             ],
             "dlvFlags": ["--check-go-version=false"]

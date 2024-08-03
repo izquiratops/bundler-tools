@@ -11,8 +11,8 @@ import (
 	"github.com/tdewolff/minify/v2/css"
 	"github.com/tdewolff/minify/v2/html"
 
-	"github.com/izquiratops/bundler-tools/assets"
-	"github.com/izquiratops/bundler-tools/utils"
+	"github.com/izquiratops/bundler-tools/tools/assets"
+	"github.com/izquiratops/bundler-tools/tools/directory"
 )
 
 func loadAndMinify(m *minify.M, distDirPath, fileType string) func(args api.OnLoadArgs) (api.OnLoadResult, error) {
@@ -156,7 +156,7 @@ func Serve(entryFilePath, distDirPath string, enableMinify bool) error {
 }
 
 func Clean(distDirPath string) {
-	utils.Clean(distDirPath)
+	directory.Clean(distDirPath)
 
 	fmt.Println("clean completed successfully.")
 }
