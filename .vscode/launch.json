@@ -25,8 +25,8 @@
             "env": {},
             "args": [
                 "serve",
-                "--entry", "../src/main.js",
-                "--dist", "../dist",
+                "--entry", "../japanese-cheat-sheet/src/main.js",
+                "--dist", "../japanese-cheat-sheet/dist",
                 "--minify", "false"
             ],
             "dlvFlags": ["--check-go-version=false"]
@@ -40,7 +40,7 @@
             "env": {},
             "args": [
                 "clean",
-                "--dist", "../dist"
+                "--dist", "../japanese-cheat-sheet/dist"
             ],
             "dlvFlags": ["--check-go-version=false"]
         },
