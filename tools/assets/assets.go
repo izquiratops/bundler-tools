@@ -44,10 +44,10 @@ func HandleHtmlFile(htmlBytes []byte, srcDirPath, distDirPath string) ([]byte, e
 
 	var replaceAsset func(*html.Node) error
 	replaceAsset = func(n *html.Node) error {
-		// Handle SVG
+		// Handle every <img> element with a relative src path
 		if n.Type == html.ElementNode && n.Data == "img" {
 			for i, attr := range n.Attr {
-				if attr.Key == "src" && bytes.HasSuffix([]byte(attr.Val), []byte(".svg")) {
+				if attr.Key == "src" && !filepath.IsAbs(attr.Val) {
 					n.Attr[i].Val, err = handleAsset(srcDirPath, distDirPath, attr.Val)
 					if err != nil {
 						return err
